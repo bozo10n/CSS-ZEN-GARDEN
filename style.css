@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap');
+
+/*
+    Here are some of the selectors I used for this assignment:
+
+    For the body, I used a type selector to set the background and font.
+    I used the .page-wrapper class to center the main content on the page.
+    To style the articles, I used the attribute selector [role="article"].
+    For the links, I used the a:visited pseudo-class to change the color of visited links.
+    The ul > li child combinator helped me remove the bullet points from the lists.
+    To style the navigation menu, I used the h3 + nav direct sibling combinator.
+    And finally, the h3 ~ ul general sibling combinator was used to style the lists that come after the h3 elements.
+
+    I tried using a gradient for the background, but it didn't look right and I couldn't figure out why. so I decided to use a solid color instead.
+*/
+
+:root {
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --primary-color: #495057;
+    --secondary-color: #dee2e6;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* Type Selector */
+body {
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+a:link, a:hover {
+    color: var(--primary-color);
+}
+
+a:visited {
+    color: #868e96;
+}
+
+.intro, .sidebar .wrapper {
+    background-color: #fff;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+header {
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.intro {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+[role="article"] {
+    margin-bottom: 2rem;
+}
+
+a:visited {
+    color: var(--secondary-color);
+}
+
+.sidebar .wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+h3 + nav {
+    margin-top: 0.5rem;
+}
+
+h3 ~ ul {
+    margin-left: 1rem;
+}
+
+.page-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
